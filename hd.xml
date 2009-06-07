@@ -1,0 +1,44 @@
+<plugin>
+	<title>HD Plugin</title>
+	<filename>hd.swf</filename>
+	<version>1.3</version>
+	<compatibility>Compatible with 4.3; dock button works from 4.5</compatibility>
+	<author>LongTail Video</author>
+	<description>
+		This plugin implements an HD quality toggle in the controlbar. 
+		An icon is shown to do the toggle, and the value is saved as a cookie. 
+		This plugin works for single files and playlists (in the latter case, a new playlist is loaded).
+		For the 4.5 button or higher, the plugin can also place a button in the dock.
+		As of version 1.3, the plugin will not restart the video after a switch when using streaming servers.
+	</description>
+	<href>http://developer.longtailvideo.com/trac/browser/plugins/hd</href>
+
+	<flashvars>
+		<flashvar>
+			<name>bitrate</name>
+			<default>1500</default>
+			<description>
+				Bitrate of the HD file to play. 
+				This is automatically picked up for HTTP streamed files, but not for RTMP streamed files.
+				Therefore you can set an HD bitrate through this flashvar.
+			</description>
+		</flashvar>
+		<flashvar>
+			<name>file</name>
+			<default></default>
+			<description>
+				Location of the HD video the player should load.
+				The regular 'file' flashvar holds the location of the fallback video.
+			</description>
+		</flashvar>
+		<flashvar>
+			<name>fullscreen</name>
+			<default>false</default>
+			<description>
+				When true, the HD file is automatically turned on when going fullscreen.
+				The HD file is automatically turned off when returning to normal screen again.
+			</description>
+		</flashvar>
+	</flashvars>
+
+</plugin>
